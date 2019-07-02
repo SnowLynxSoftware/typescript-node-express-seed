@@ -20,6 +20,7 @@ The purpose of this project is to streamline the process when creating a new RES
             - A logger for just about everything.
    - [Typescript](https://www.typescriptlang.org/)
       - Superset of Javascript.
+         - [TSC-Watch](https://github.com/gilamran/tsc-watch#readme) - Used to auto recompile the app in real time when there are changes made.
    - [TSLint](https://palantir.github.io/tslint/)
       - An extensible linter for the TypeScript language.
 

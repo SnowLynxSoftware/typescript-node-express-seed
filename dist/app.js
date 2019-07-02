@@ -1,39 +1,33 @@
-import { Server } from 'http';
-import { ServerApp } from './server';
-
-export class App {
-
-    /**
-     * A reference to the running server.
-     */
-    public server: any;
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const server_1 = require("./server");
+class App {
     /**
      * Default Constructor
      */
     constructor() {
         this.server = null;
     }
-
     /**
      * Initialize the application.
      */
-    public async init(): Promise<void> {
-        ServerApp.start()
-        .then((srv: Server) => {
+    async init() {
+        server_1.ServerApp.start()
+            .then((srv) => {
             if (srv) {
                 this.server = srv;
-            } else {
+            }
+            else {
                 throw new Error('An error occured when attempting to start the server.');
             }
         })
-        .catch((err) => {
+            .catch((err) => {
             console.error(err);
             process.exit(1);
         });
     }
 }
-
+exports.App = App;
 /**
  * Bootstrap the application here and handle any errors events gracefully.
  */
@@ -42,11 +36,11 @@ const initialize = async () => {
     await app.init();
     console.log('Platform: ' + process.platform + '-' + process.arch);
     console.log('Node: ' + process.version);
-    console.log('Environment: ' + ServerApp.config.nodeEnvironment);
-    console.log('Server is listening on port ' + ServerApp.config.appPort);
+    console.log('Environment: ' + server_1.ServerApp.config.nodeEnvironment);
+    console.log('Server is listening on port ' + server_1.ServerApp.config.appPort);
     app.server.on('error', () => {
         console.error('OH NO AN ERROR');
     });
 };
-
 initialize();
+//# sourceMappingURL=app.js.map

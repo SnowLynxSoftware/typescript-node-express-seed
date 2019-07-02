@@ -1,37 +1,24 @@
-import { config } from 'dotenv';
-import { Application } from 'express';
-import { Server } from 'http';
-import { IAppConfig } from './config/app-config.interface';
-import { ConfigFactory } from './config/config.factory';
-import { RouterFactory } from './routes';
-import { ServerFactory } from './server.factory';
-
-export class ServerApp {
-
-    /**
-     * The Express Application Instance.
-     */
-    public static app: Application;
-
-    /**
-     * Application configuration options.
-     */
-    public static config: IAppConfig;
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv_1 = require("dotenv");
+const config_factory_1 = require("./config/config.factory");
+const routes_1 = require("./routes");
+const server_factory_1 = require("./server.factory");
+class ServerApp {
     /**
      * Starts the server application.
      */
-    public static async start(): Promise<Server> {
+    static async start() {
         // If we are running in development mode--load the environment variables config file.
         if (process.env.NODE_ENV === 'development') {
-            config();
+            dotenv_1.config();
         }
         // Initialize the config object.
-        ServerApp.config = ConfigFactory.parse(process.env);
+        ServerApp.config = config_factory_1.ConfigFactory.parse(process.env);
         // Initialize the server object.
-        ServerApp.app = ServerFactory.createServer();
+        ServerApp.app = server_factory_1.ServerFactory.createServer();
         // Build routes
-        RouterFactory.initializeRoutes(ServerApp.app);
+        routes_1.RouterFactory.initializeRoutes(ServerApp.app);
         // Setup Cors
         ServerApp.app.use((_req, res, next) => {
             res.header('Access-Control-Allow-Origin', '*');
@@ -40,9 +27,9 @@ export class ServerApp {
             res.header('Access-Control-Allow-Credentials', 'true');
             next();
         });
-
         // Start listening on the server.
         return ServerApp.app.listen(ServerApp.config.appPort);
     }
-
 }
+exports.ServerApp = ServerApp;
+//# sourceMappingURL=index.js.map
