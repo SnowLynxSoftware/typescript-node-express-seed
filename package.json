@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-express-seed",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A highly opinionated boilerplate seed app for starting a new Node/Express Server using Typescript.",
   "main": "index.js",
   "scripts": {
