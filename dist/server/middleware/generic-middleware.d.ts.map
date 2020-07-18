@@ -1,1 +1,0 @@
-{"version":3,"file":"generic-middleware.d.ts","sourceRoot":"","sources":["../../../src/server/middleware/generic-middleware.ts"],"names":[],"mappings":"AAAA,OAAO,EACJ,YAAY,EACZ,QAAQ,EACV,MAAM,SAAS,CAAC;AACjB,OAAO,EAAE,WAAW,EAAE,MAAM,+BAA+B,CAAC;AAE5D;;GAEG;AACH,qBAAa,iBAAiB;IAE3B;;OAEG;WACiB,aAAa,CAAC,GAAG,EAAE,WAAW,EAAE,GAAG,EAAE,QAAQ,EAAE,IAAI,EAAE,YAAY;CAavF"}
