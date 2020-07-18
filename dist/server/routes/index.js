@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouterFactory = void 0;
 const user_router_1 = require("./user.router");
 /**
  * Manages the creation and binding of routes for the API.

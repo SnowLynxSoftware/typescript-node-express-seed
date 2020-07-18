@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseRouter = void 0;
 const express_1 = require("express");
 /**
  * Defines properties that all routes should have.

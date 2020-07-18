@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserRouter = void 0;
 const user_manager_1 = require("../managers/user.manager");
 const generic_middleware_1 = require("../middleware/generic-middleware");
 const base_router_1 = require("./base.router");

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerApp = void 0;
 const dotenv_1 = require("dotenv");
 const config_factory_1 = require("./config/config.factory");
 const routes_1 = require("./routes");

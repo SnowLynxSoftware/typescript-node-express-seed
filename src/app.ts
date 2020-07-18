@@ -24,7 +24,7 @@ export class App {
             if (srv) {
                 this.server = srv;
             } else {
-                throw new Error('An error occured when attempting to start the server.');
+                throw new Error('An error occurred when attempting to start the server.');
             }
         })
         .catch((err) => {
@@ -49,4 +49,7 @@ const initialize = async () => {
     });
 };
 
+/**
+ * Start the server...
+ */
 initialize();

@@ -16,7 +16,7 @@ export class GenericMiddleware {
       try {
          // Check the request queryParams for a username property and set it if it exists---
          if (req.query.username) {
-            req.username = req.query.username;
+            req.username = req.query.username as string;
             res.locals.username = req.username;
          }
          next();

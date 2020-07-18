@@ -1,12 +1,13 @@
 {
   "name": "typescript-node-express-seed",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A highly opinionated boilerplate seed app for starting a new Node/Express Server using Typescript.",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && npm run serve",
     "build": "rm -r -f dist && tsc",
-    "serve": "clear && tsc-watch --outDir ./dist --onSuccess \"node -r dotenv/config ./dist/app.js\""
+    "serve": "clear && tsc-watch --outDir ./dist --onSuccess \"node -r dotenv/config ./dist/app.js\"",
+    "linter": "tslint --fix -c tslint.json --project ."
   },
   "repository": {
     "type": "git",
@@ -20,20 +21,20 @@
   "homepage": "https://github.com/SnowLynxSoftware/typescript-node-express-seed#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.9.1",
-    "winston": "^3.2.1"
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@types/async": "^3.0.0",
-    "@types/body-parser": "^1.17.0",
+    "@types/async": "^3.2.3",
+    "@types/body-parser": "^1.19.0",
     "@types/dotenv": "^6.1.1",
-    "@types/express": "^4.17.0",
-    "@types/node": "^12.0.10",
+    "@types/express": "^4.17.7",
+    "@types/node": "^12.12.50",
     "@types/winston": "^2.4.4",
-    "tsc-watch": "^2.2.1",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.2"
+    "tsc-watch": "^2.4.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.7"
   }
 }

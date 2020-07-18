@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigFactory = void 0;
 /**
  * Handles parsing the environment variables into a strictly typed object.
  */
